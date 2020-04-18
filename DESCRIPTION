@@ -23,7 +23,7 @@ Suggests:
     checkmate,
     distr6,
     pracma,
-    randomForestSRC,
+    obliqueRSF,
     rmarkdown,
     testthat
 Encoding: UTF-8
