@@ -6,7 +6,8 @@
 \alias{mlr3learners.obliquersf-package}
 \title{mlr3learners.obliquersf: Learners from the {obliqueRSF} package for 'mlr3'}
 \description{
-Adds learners from the {obliqueRSF} package to 'mlr3'.
+Adds learners from the {obliqueRSF} package to
+    'mlr3'.
 }
 \author{
 \strong{Maintainer}: Raphael Sonabend \email{raphael.sonabend.15@ucl.ac.uk}

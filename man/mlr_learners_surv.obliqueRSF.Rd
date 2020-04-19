@@ -5,7 +5,7 @@
 \alias{LearnerSurvObliqueRSF}
 \title{Survival Oblique Random Survival Forest Learner}
 \description{
-A \link[mlr3:LearnerSurv]{mlr3::LearnerSurv} implementing obliqueRSF from package
+A \link[mlr3proba:LearnerSurv]{mlr3proba::LearnerSurv} implementing obliqueRSF from package
 \CRANpkg{obliqueRSF}.
 Calls \code{\link[obliqueRSF:ORSF]{obliqueRSF::ORSF()}}.
 }
@@ -86,7 +86,8 @@ Creates a new instance of this \link[R6:R6Class]{R6} class.
 \if{html}{\out{<a id="method-oob_error"></a>}}
 \if{latex}{\out{\hypertarget{method-oob_error}{}}}
 \subsection{Method \code{oob_error()}}{
-OOB error extracted from the model slot \code{oob_error}.
+Integrated brier score OOB error extracted from the model slot \code{oob_error}.
+Concordance is also available.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LearnerSurvObliqueRSF$oob_error()}\if{html}{\out{</div>}}
 }

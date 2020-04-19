@@ -74,7 +74,7 @@ LearnerSurvObliqueRSF = R6Class("LearnerSurvObliqueRSF",
     #' Concordance is also available.
     #' @return `numeric()`.
     oob_error = function() {
-      self$model$oob_error$integrated_briscr[2,]
+      self$model$oob_error$integrated_briscr[2, ]
     }
 
   ),
