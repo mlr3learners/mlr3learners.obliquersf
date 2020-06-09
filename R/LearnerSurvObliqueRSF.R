@@ -86,7 +86,7 @@ LearnerSurvObliqueRSF = R6Class("LearnerSurvObliqueRSF",
 
       mlr3misc::invoke(
         obliqueRSF::ORSF,
-        data     = task$data(),
+        data     = as.data.frame(task$data()),
         time     = targets[1L],
         status   = targets[2L],
         .args    = pv
