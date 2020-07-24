@@ -1,6 +1,6 @@
 Package: mlr3learners.obliquersf
 Title: Learners from the {obliqueRSF} package for 'mlr3'
-Version: 0.1.1.9000
+Version: 0.1.2
 Authors@R:
     person(given = "Raphael",
            family = "Sonabend",
@@ -21,7 +21,7 @@ Imports:
     survival
 Suggests:
     checkmate,
-    distr6,
+    distr6 (>= 1.4.2),
     pracma,
     obliqueRSF,
     rmarkdown,

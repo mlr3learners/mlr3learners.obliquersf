@@ -104,7 +104,7 @@ LearnerSurvObliqueRSF = R6Class("LearnerSurvObliqueRSF",
       p = mlr3misc::invoke(predict, self$model, newdata = newdata, times = utime, .args = pv)
       cdf = 1 - p
       # define WeightedDiscrete distr6 object from predicted survival function
-      x = rep(list(data = data.frame(x = utime, cdf = 0)), task$nrow)
+      x = rep(list(list(x = utime, cdf = 0)), task$nrow)
       for (i in seq_len(task$nrow)) {
         x[[i]]$cdf = cdf[i, ]
       }
@@ -114,7 +114,7 @@ LearnerSurvObliqueRSF = R6Class("LearnerSurvObliqueRSF",
         params = x,
         decorators = c("CoreStatistics", "ExoticStatistics"))
 
-      crank = as.numeric(sapply(x, function(y) sum(y[, 1] * c(y[, 2][1], diff(y[, 2])))))
+      crank = as.numeric(sapply(x, function(y) sum(y$x * c(y$cdf[1], diff(y$cdf)))))
 
       mlr3proba::PredictionSurv$new(task = task, crank = crank, distr = distr)
 
